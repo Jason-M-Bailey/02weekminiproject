@@ -30,7 +30,6 @@
           <div class="card-body">
             <p>Use these three properties to create a Flexbox row layout.</p>
           </div>
-          <!-- with the <pre> element, it counts all spaces literally, so proper code indentation cannot be applied in this case -->
           <pre class="code-block"><code>.row {
   display: flex;
   flex-direction: row;
@@ -98,17 +97,100 @@
 
       <div class="card-column">
         <figure class="card code-card">
-          <h2 class="card-header">Overlay Card with Title</h2>
+          <h2 class="card-header">Fading Background</h2>
           <div class="card-body">
-            <p>Use position properties and negative margins to raise elements higher than their natural starting point.
-            </p>
+            <p>Use linear-gradient() function to create a fading background.</p>
           </div>
-          <pre class="code-block"><code>.card-header {
-  position: relative;
-  margin-top: -20px;
+          <pre class="code-block"><code>.code-card pre {
+  background-image: linear-gradient(
+  rgba(232, 102, 236, 0.3) 0%,
+  rgba(232, 102, 236, 0.6) 100%
+  );
 }</code></pre>
         </figure>
       </div>
+
+      <div class="card-column">
+        <figure class="card code-card">
+          <h2 class="card-header">Overlap Effect</h2>
+          <div class="card-body">
+            <p>Use position and negative margins to move title of card over the card's outline and create an overlap effect.</p>
+          </div>
+          <pre class="code-block"><code>.code-card .card-header {
+  position: relative;
+  margin: -4rem 0 1.5rem 0;
+}
+</code></pre>
+        </figure>
+      </div>
+
+      <div class="card-column">
+        <figure class="card code-card">
+          <h2 class="card-header">Outline</h2>
+          <div class="card-body">
+            <p>Outline is like border, but on the outside of the box instead of inside</p>
+          </div>
+          <pre class="code-block"><code>.code-card {
+  outline: 2px dashed var(--gin)
+}
+</code></pre>
+        </figure>
+      </div>
+
+      <div class="card-column">
+        <figure class="card code-card">
+          <h2 class="card-header">Flex-Grow</h2>
+          <div class="card-body">
+            <p>Each card's code block grows to the height of the largest code block on the row, making each card in a row even in height.</p>
+          </div>
+          <!-- with the <pre> element, it counts all spaces literally, so proper code indentation cannot be applied in this case -->
+          <pre class="code-block"><code>.code-card .code-block {
+  flex-grow: 1;
+}
+</code></pre>
+        </figure>
+      </div>
+
+      <div class="card-column">
+        <figure class="card code-card">
+          <h2 class="card-header">Sizing Tip</h2>
+          <div class="card-body">
+            <p>Set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.)</p>
+          </div>
+          <pre class="code-block"><code>html {
+  font-size: 62.5%;
+}
+</code></pre>
+        </figure>
+      </div>
+
+      <div class="card-column">
+        <figure class="card code-card">
+          <h2 class="card-header">H & P Tag Sizing with rem</h2>
+          <div class="card-body">
+            <p>Set your H1, H2...P tags with rem</p>
+          </div>
+          <pre class="code-block"><code>h1 {
+  font-size: 4rem;
+}
+(h2 = 3.5, h3 = 3, h4 = 2.5, h5 = 2, h6 = 1.5, p = 1)
+</code></pre>
+        </figure>
+      </div>
+
+      <div class="card-column">
+        <figure class="card code-card">
+          <h2 class="card-header">Transition</h2>
+          <div class="card-body">
+            <p>When the screen resizes, make it so our columns don't jump in size.</p>
+          </div>
+          <pre class="code-block"><code>.card-column {
+  transition: flex-basis 500ms linear;
+}
+</code></pre>
+        </figure>
+      </div>
+
     </section>
   </main>
 
